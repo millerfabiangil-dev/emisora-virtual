@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header {
+  background: #ff4500;
+  color: white;
+  padding: 20px;
+  position: relative;
+  z-index: 10; /* arriba */
+}
+
+h1 {
+  margin: 0;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  margin: 30px auto;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 10; /* arriba */
+}
+
+input, button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 90%;
+}
+
+button {
+  background: #ff4500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  z-index: 10; /* arriba */
+}
+
+button:hover {
+  background: #e03e00;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff4500;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  position: relative;
+  z-index: 10; /* arriba */
+}
+
+/* ✅ Ondas decorativas (al fondo y sin bloquear clics) */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 200px;
+  background: rgba(255, 69, 0, 0.1);
+  border-radius: 100%;
+  animation: wave 6s infinite linear;
+  pointer-events: none; /* <- clave: no bloquea clics */
+  z-index: 0; /* siempre atrás */
+}
+
+.wave:nth-child(2) {
+  animation-delay: -3s;
+  background: rgba(255, 69, 0, 0.15);
+}
+
+@keyframes wave {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
